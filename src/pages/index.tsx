@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <hr className="my-4" />
       <div className="grid grid-cols-2 gap-5 h-24">
-        <div className="col-span-1 border-r-[1px] border-r-gray-200">
+        <div className="col-span-1">
           <div className="flex items-center pr-4">
             <MathJax>{"\\(f(x) =\\)"}</MathJax>
             <input
