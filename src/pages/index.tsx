@@ -33,7 +33,7 @@ export default function Home() {
             />
           </div>
           <div className="h-4" />
-          <MathJax>{`\\(f'(x) = ${
+          <MathJax dynamic>{`\\(f'(x) = ${
             fpx
               ?.toTex({
                 implicit: "hide",
