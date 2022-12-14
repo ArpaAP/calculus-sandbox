@@ -1,6 +1,11 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
+import classNames from "classnames";
+import Link from "next/link";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
+
   return (
     <div>
       <Head>
@@ -18,8 +23,27 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="text-gray-500 text-sm">미적분 계산기</div>
           </div>
           <hr className="w-full border-b-[1px] border-gray-300/50 my-2" />
-          <div className="bg-slate-300/60 px-3 py-2 rounded-lg">
-            양함수 미분기
+          <div className="flex flex-col gap-2">
+            <Link href="/" passHref>
+              <div
+                className={classNames(
+                  router.pathname === "/" && "bg-slate-300/60",
+                  "px-3 py-2 rounded-lg"
+                )}
+              >
+                양함수 미분기
+              </div>
+            </Link>
+            <Link href="/n-derivative" passHref>
+              <div
+                className={classNames(
+                  router.pathname === "/n-derivative" && "bg-slate-300/60",
+                  "px-3 py-2 rounded-lg"
+                )}
+              >
+                N계도함수 미분기
+              </div>
+            </Link>
           </div>
         </div>
         <div className="col-span-10 px-8 py-6 h-screen overflow-y-scroll">

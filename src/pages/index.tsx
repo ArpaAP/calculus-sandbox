@@ -1,6 +1,6 @@
 import { MathJax } from "better-react-mathjax";
 import Layout from "components/Layout";
-import { derivative, MathNode, simplify, simplifyConstant } from "mathjs";
+import { derivative, MathNode } from "mathjs";
 import { useState } from "react";
 
 export default function Home() {
@@ -41,7 +41,7 @@ export default function Home() {
               .replaceAll("\\cdot", "") ?? ""
           }\\)`}</MathJax>
         </div>
-        <div className="col-span=1">asdf</div>
+        <div className="col-span=1"></div>
       </div>
     </Layout>
   );
