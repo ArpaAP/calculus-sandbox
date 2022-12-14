@@ -59,7 +59,7 @@ export default function Home() {
 
           <hr className="my-2" />
 
-          <MathJax>{`\\(f${N < 3 ? "'".repeat(N) : `^{(${N})}`}(x) = ${
+          <MathJax dynamic>{`\\(f${N < 3 ? "'".repeat(N) : `^{(${N})}`}(x) = ${
             fpx
               ?.toTex({
                 implicit: "hide",
