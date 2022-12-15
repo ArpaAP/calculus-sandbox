@@ -3,7 +3,7 @@ import Layout from "components/Layout";
 import { derivative, MathNode, parse } from "mathjs";
 import { useEffect, useState } from "react";
 
-export default function Home() {
+export default function NDerivativePage() {
   const [N, setN] = useState(2);
   const [fx, setFx] = useState("");
   const [fpx, setFpx] = useState<MathNode | null>(null);
