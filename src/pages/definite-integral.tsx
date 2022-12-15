@@ -36,7 +36,11 @@ export default function DefiniteIntegralPage() {
         b: deferredB,
       })
       .then((r) => {
-        setIntegral(simplify(parse(r.data.result_str)));
+        try {
+          setIntegral(simplify(parse(r.data.result_str)));
+        } catch (e) {
+          return;
+        }
       });
   }, [deferredFx, deferredA, deferredB]);
 
